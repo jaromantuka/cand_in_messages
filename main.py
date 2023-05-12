@@ -91,7 +91,7 @@ with graphs:
     xticklabels = ax.get_xticklabels()
     xticklabels[3].set_va('bottom')  # set the vertical alignment of the label to 'bottom'
     xticklabels[3].set_y(0.1)  # set the y-position of the label
-    xticklabels[0].set_y(0.2)
+    xticklabels[0].set_y(0.12)
    
     # Draw ylabels
     ax.set_rlabel_position(0)
@@ -115,7 +115,7 @@ with graphs:
 
     # Add legend
     plt.legend(loc='center left', bbox_to_anchor=(1.2, 0.5), fontsize='xx-small')
-    plt.title(keyword, fontsize = 5, y=1.05)
+    plt.title(keyword, fontsize = 5, y=1.07)
     
     st.pyplot(fig)
 
