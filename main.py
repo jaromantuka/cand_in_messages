@@ -15,7 +15,7 @@ header = st.container()
 data_and_selection = st.container()
 graphs = st.container()
 
-@st.cache
+@st.cache_data 
 def get_data(filename):
     data = pd.read_csv(filename)
     return data
@@ -24,10 +24,7 @@ def get_data(filename):
 with header: 
 
     st.title('How many candidates wrote applications and received propositions from recruiters in 30 days') 
-    url = 'https://djinni.co/hire'
-    btn = st.button('Find a job on Djinni :genie:')
-    if btn:
-       webbrowser.open_new_tab(url)
+    
 
 with data_and_selection: 
     st.subheader('Choose the category')
