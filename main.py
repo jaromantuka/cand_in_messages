@@ -59,7 +59,8 @@ with graphs:
     applied = df.loc["apply"].sum()
     poked = df.loc["poke"].sum()
 
-    #st.subheader
+    st.subheader('{} candidates sent applications and {} candidates received propositions from recruiter over the last 30 days.'\
+                .format(applied, poked))
 
     #st.markdown('**{}** {} candidates sent applications and **{}** candidates received propositions from recruiter over the last 30 days.'\
     #            .format(applied, keyword, poked))
@@ -90,7 +91,7 @@ with graphs:
     xticklabels = ax.get_xticklabels()
     xticklabels[3].set_va('bottom')  # set the vertical alignment of the label to 'bottom'
     xticklabels[3].set_y(0.1)  # set the y-position of the label
-    xticklabels[0].set_y(0.1)
+    xticklabels[0].set_y(0.2)
    
     # Draw ylabels
     ax.set_rlabel_position(0)
@@ -114,8 +115,8 @@ with graphs:
 
     # Add legend
     plt.legend(loc='center left', bbox_to_anchor=(1.2, 0.5), fontsize='xx-small')
-    plt.title('{} {} candidates sent applications and {} candidates received propositions from recruiter over the last 30 days.'\
-                .format(applied, keyword, poked), fontsize = 5)
+    plt.title(keyword, fontsize = 5, y=1.05)
+    
     st.pyplot(fig)
 
     st.markdown('**{}** {} кандидатів писали відгуки і **{}** кандидатів отримували пропозиції від рекрутерів за останні 30 днів (12 ківтня - 12 травня 2023).'\
