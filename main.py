@@ -33,6 +33,7 @@ with data_and_selection:
     cand = cand.dropna()
  #the dropdown. value = '' (defealt)
     options = cand['primary_keyword'].unique()
+    options = options[options!='Lead']
     options = np.insert(options,0,'')
     options = np.sort(options)
     keyword = st.selectbox('Empty choice shows all the categories together', options = options, index =0) 
